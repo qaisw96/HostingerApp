@@ -2,8 +2,8 @@
   "name": "hostinger-tools-plugin-vue",
   "private": true,
   "scripts": {
-    "build": "webpack --mode production",
-    "dev": "webpack --mode development --watch",
+    "build": "node init && webpack --mode production",
+    "dev": "node init && webpack --mode development --watch",
     "lint": "eslint . --ext .vue,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {

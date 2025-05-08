@@ -3,7 +3,7 @@
   "scripts": {
     "auth:gcp": "gcloud auth application-default login",
     "auth:gca": "npx google-artifactregistry-auth",
-    "dev": "npm run development",
+    "dev": "node init && npm run development",
     "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
     "prod": "npm run production",
     "watch": "npm run development -- --watch",
@@ -20,7 +20,7 @@
     "*.{js,ts,vue}": [
       "prettier --write",
       "eslint --cache --fix",
-      "bash -c 'if grep -l \"console\\.log\" $1; then echo \"❌ Error: console.log found in $1. Please remove before committing.\"; exit 1; fi' --"
+      "bash -c 'if grep -l \"console\\.log\" $1; then echo \"\u274c Error: console.log found in $1. Please remove before committing.\"; exit 1; fi' --"
     ],
     "*.{css,scss}": [
       "prettier --write",
